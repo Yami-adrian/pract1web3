@@ -1,8 +1,9 @@
-function miPromesa() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Éxito después de 3 segundos");
-    }, 3000);
-  });
+const preciosUsd = [10, 25, 40];
+
+const preciosBs = [];
+
+for (let i = 0; i < preciosUsd.length; i++) {
+    preciosBs.push(preciosUsd[i] * 6.96);
 }
-miPromesa().then(res => console.log(res));
+
+console.log("Precios en bolivianos:", preciosBs);

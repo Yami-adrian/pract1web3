@@ -1,12 +1,19 @@
-function miPromesa() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Resultado de la promesa");
-    }, 1000);
-  });
+function transformarLista(arreglo, funcion) {
+    const nuevo = [];
+
+    for (let i = 0; i < arreglo.length; i++) {
+        nuevo.push(funcion(arreglo[i]));
+    }
+
+    return nuevo;
 }
-miPromesa().then(res => console.log(res));
-async function ejecutar() {
-  const res = await miPromesa();
-  console.log(res);
-}ejecutar();
+
+function aplicarImpuesto(precio) {
+    return precio * 1.15;
+}
+
+const precios = [100, 200, 50];
+
+const preciosConImpuesto = transformarLista(precios, aplicarImpuesto);
+
+console.log("Precios con impuesto:", preciosConImpuesto);

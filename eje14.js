@@ -1,13 +1,25 @@
-function miPromesa() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Mensaje desde la promesa");
-    }, 1000);
-  });
+const libros = [
+    {
+        titulo: "Cien años de soledad",
+        autor: "Garcia Marquez",
+        disponible: true
+    },
+    {
+        titulo: "Rayuela",
+        autor: "Cortazar",
+        disponible: false
+    },
+    {
+        titulo: "El Aleph",
+        autor: "Borges",
+        disponible: true
+    }
+];
+
+for (let libro of libros) {
+    const { titulo, autor, disponible } = libro;
+
+    if (disponible === true) {
+        console.log("Disponible: " + titulo + " - " + autor);
+    }
 }
-function conCallback(cb) {
-  miPromesa().then(res => cb(res));
-}
-conCallback((res) => {
-  console.log(res);
-});

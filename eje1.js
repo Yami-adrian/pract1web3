@@ -1,10 +1,5 @@
-function contarVocales(texto) {
-  const vocales = { a: 0, e: 0, i: 0, o: 0, u: 0 };
-  for (let letra of texto.toLowerCase()) {
-    if (vocales.hasOwnProperty(letra)) {
-      vocales[letra]++;
-    }
-  }
-  return vocales;
-}
-console.log(contarVocales("euforia")); 
+const estudiantes = ["Ana", "Boris", "Carla", "Diego", "Elena", "Fabricio"];
+
+console.log("Primer estudiante matriculado: " + estudiantes[0]);
+
+console.log("Ultimo estudiante matriculado: " + estudiantes[estudiantes.length - 1]);

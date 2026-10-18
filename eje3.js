@@ -1,12 +1,9 @@
-function paresImpares(arr) {
-  const resultado = { pares: [], impares: [] };
-  for (let num of arr) {
-    if (num % 2 === 0) {
-      resultado.pares.push(num);
-    } else {
-      resultado.impares.push(num);
-    }
-  }
-  return resultado;
-}
-console.log(paresImpares([1,2,3,4,5]));
+const fila = ["Rosa", "Tomas", "Ines", "Hugo", "Vera"];
+
+console.log("Fila inicial: ", fila);
+
+let atendido = fila.shift();
+console.log("Atendido: " + atendido + " -> Fila actual: ", fila);
+
+atendido = fila.shift();
+console.log("Atendido: " + atendido + " -> Fila actual: ", fila);

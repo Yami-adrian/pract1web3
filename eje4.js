@@ -1,7 +1,15 @@
-function mayorMenor(arr) {
-  return {
-    mayor: Math.max(...arr),
-    menor: Math.min(...arr)
-  };
+const vehiculo = {
+    marca: "Toyota",
+    modelo: "Hilux",
+    anio: 2023,
+    precio: 18500
+};
+
+console.log("Vehiculo: " + vehiculo.marca + " " + vehiculo.modelo + " (" + vehiculo.anio + ")");
+console.log("Precio: $" + vehiculo.precio);
+
+if (vehiculo.precio > 15000) {
+    console.log("Categoria: gama alta");
+} else {
+    console.log("Categoria: gama normal");
 }
-console.log(mayorMenor([3,1,5,4,2]));
